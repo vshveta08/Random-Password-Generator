@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background: linear-gradient(to right, rgba(156, 255, 196, 0.527), rgba(251, 216, 134, 0.482), rgba(253, 146, 150, 0.363));
+    ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    padding: 50px 30px;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    translate: -50% -50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    /* text-shadow: 2px 2px 3px rgba(40, 39, 39, 0.557); */
+
+    background-color: #030c50d4;
+    color: transparent;
+    text-shadow: 2px 3px 4px rgba(255, 255, 255, 0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    /* text-shadow: 0 2px 1px #79a06d, 
+      -1px 3px 1px #82ad75, 
+      -2px 5px 1px #8ebf80; */
+
+    /*
+    color: #040498c8;
+    text-shadow: -1px 1px 0 #f2f20cee,
+      1px 1px 0 #ff0c7d,
+      1px -1px 0 #04f364ac,
+     -1px -1px 0 #06ffffe2; */
+
+    /* 
+    text-shadow: 2px 2px 3px rgba(83, 83, 83, 0.893);
+    background: -webkit-linear-gradient(#5c04ff, #fe0404);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+ */
+}
+
+.output {
+    display: flex;
+    /* border: 1px solid black; */
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(229, 134, 255, 0.356);
+    border-radius: 12px;
+    box-shadow: 2px 2px 3px rgb(112, 112, 112),
+        inset 3.5px 3.5px 5.5px white,
+        inset -3.5px -3.5px 5.5px rgb(67, 67, 67);
+    margin-top: 15px;
+
+}
+
+.output input {
+    padding: 5px 8px;
+    background-color: rgba(113, 113, 113, 0);
+    border: none;
+    font-size: 1.2rem;
+    color: rgb(1, 10, 113);
+    text-shadow: 1px 1px 3px rgb(215, 215, 215);
+    outline: none;
+}
+
+.output input::placeholder {
+    color: rgba(1, 10, 113, 0.422);
+
+}
+
+.output .copybtn {
+    background-color: rgba(229, 134, 255, 0.112);
+    border: none;
+}
+
+.output .copybtn span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(3, 54, 149, 0.881);
+    background-color: rgba(127, 176, 253, 0.874);
+    position: absolute;
+    top: 110px;
+    right: 25px;
+    text-shadow: 1px 1px 2px rgb(179, 235, 255);
+    box-shadow: 1px 1px 2px rgb(112, 112, 112),
+        inset 2px 2px 3px white,
+        inset -2px -2px 3px rgb(67, 67, 67);
+    border-radius: 10px;
+    padding: 1px 7px;
+    transition: all 250ms ease-in-out;
+    opacity: 0;
+}
+
+.output .copybtn span.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.output img {
+    height: 20px;
+    cursor: pointer;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    /* align-items: center; */
+    justify-content: center;
+    /* border: 1px solid black; */
+    background-color: rgba(12, 239, 255, 0.306);
+    padding: 37px 30px;
+    box-shadow: 3px 3px 6px rgb(112, 112, 112),
+        inset 5px 5px 7px white,
+        inset -4px -4px 7px rgba(67, 67, 67, 0.874);
+    border-radius: 15px;
+}
+
+.input .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.input .mid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+
+.input .mid .slider {
+    width: 100%;
+    height: 13px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgb(112, 112, 112),
+        inset 2.7px 2.7px 4px white,
+        inset -2px -2px 4px rgb(67, 67, 67);
+    cursor: pointer;
+
+    appearance: none;
+    background-color: rgb(254, 116, 132);
+}
+
+.input .mid .slider::-webkit-slider-thumb {
+    appearance: none;
+    background-color: rgb(162, 125, 255);
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgb(127, 48, 255);
+    transition: all 100ms ease-in;
+}
+
+/* slider thumb property for firefox browser */
+.input .mid .slider::-moz-range-thumb{
+    appearance: none;
+    background-color: blue;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 10px ;
+    transition: all 100ms ease-in;
+}
+
+.input .mid .check {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox input {
+    width: 20px;
+    height: 20px;
+
+    background-color: rgba(253, 250, 85, 0.653);
+    box-shadow: 1px 1px 2px rgb(112, 112, 112),
+        inset 2px 2px 3px white,
+        inset -2px -2px 4px rgb(71, 71, 71);
+
+    cursor: pointer;
+
+    /* browser default style will be removed*/
+    appearance: none;
+    /* border: 1px solid rgba(115, 115, 115, 0.568); */
+    border-radius: 5px;
+}
+
+/* for background color of chekcbox */
+.checkbox input:checked {
+    background-color: rgba(126, 92, 246, 0.822);
+    box-shadow: 1px 1px 2px rgb(112, 112, 112),
+        inset 1px 1px 4px rgb(71, 71, 71);
+}
+
+/* for color of chekcbox */
+.checkbox input:checked::before {
+    content: '✔';
+    position: absolute;
+    color: rgb(248, 236, 236);
+    left: 16%;
+    transform: translateY(-6%);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.checkbox label {
+    color: rgb(0, 81, 10);
+    font-size: 1.05rem;
+}
+
+.input .mid .strength {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input .mid .strength p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.input .mid .strength .showStrength {
+    height: 20px;
+    width: 20px;
+    /* background-color: rgba(20, 230, 62, 0.664); */
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.input .mid .button button {
+    width: 100%;
+    padding: 12px 8px;
+    font-size: 1.15rem;
+    background: linear-gradient(to right, rgba(18, 194, 233, 0.491), rgba(196, 113, 237, 0.505), rgba(18, 194, 233, 0.436));
+    border-radius: 12px;
+    border: none;
+    box-shadow: 2px 2px 4px rgb(112, 112, 112),
+        inset 2.5px 2.5px 4.5px white,
+        inset -2.5px -2.5px 4.5px rgb(67, 67, 67);
+    color: rgb(0, 0, 139);
+    text-shadow: 0px 0px 3px rgb(179, 245, 255);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.input .mid .button button:hover {
+    background: linear-gradient(to right, rgba(18, 194, 233, 0.715), rgba(196, 113, 237, 0.737), rgba(18, 194, 233, 0.678));
+}
+
+.input .mid .button button:active {
+    box-shadow: 1px 1px 1px rgb(112, 112, 112),
+        inset 2.5px 2.5px 4.5px rgb(255, 255, 255),
+        inset -2.5px -2.5px 4.5px rgb(67, 67, 67);
+}
+
+/* css for background image */
+#bgImg1 {
+    position: absolute;
+    height: 130px;
+    left: 78%;
+    top: 28%;
+    animation: animatebgImg1 3s infinite linear;
+}
+
+@keyframes animatebgImg1 {
+    50% {
+        top: 25%;
+        bottom: 10%;
+    }
+}
+
+#bgImg2 {
+    position: absolute;
+    height: 210px;
+    left: 8%;
+    top: 55%;
+    animation: animatebgImg2 3s infinite linear;
+}
+
+@keyframes animatebgImg2 {
+    50% {
+        top: 53%;
+        bottom: 15%;
+    }
+}
