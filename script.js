@@ -17,7 +17,7 @@ const indicator = document.querySelector(".showStrength");
 const generateButton = document.querySelector(".generateBtn");
 
 // for all checkbox
-const allCheckBox = document.querySelectorAll("input [type=checkbox]");
+const allCheckBox = document.querySelectorAll("input[type=checkbox]");
 
 
 // password in starting - empty
