@@ -6,6 +6,6 @@ It generates the password by using random numbers, uppercase, lowercase and symb
 
 Interface of the Password Generator ->
 
-![image](https://user-images.githubusercontent.com/109027067/232666657-00151d37-0c29-47dd-9bdf-1ed808921481.png)
+![Screenshot (93)](https://user-images.githubusercontent.com/109027067/233311086-aca659a7-3cf0-4eb5-940f-d7b346ae61a1.png)
 
-![image](https://user-images.githubusercontent.com/109027067/232667781-0ba262e7-984f-49ae-9307-47ae33ee5489.png)
+![Screenshot (94)](https://user-images.githubusercontent.com/109027067/233311124-a1ef1ead-2fd3-4421-83b5-06045253d44b.png)
