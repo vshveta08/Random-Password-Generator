@@ -164,7 +164,9 @@ body {
     cursor: pointer;
 
     appearance: none;
-    background-color: rgb(254, 116, 132);
+    background-color: rgb(255, 166, 176);
+    background-image: linear-gradient(rgb(255, 107, 124), rgb(255, 107, 124));
+    background-repeat: no-repeat;
 }
 
 .input .mid .slider::-webkit-slider-thumb {
