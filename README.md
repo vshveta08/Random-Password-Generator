@@ -8,4 +8,4 @@ Interface of the Password Generator ->
 
 ![Screenshot (93)](https://user-images.githubusercontent.com/109027067/233311086-aca659a7-3cf0-4eb5-940f-d7b346ae61a1.png)
 
-![Screenshot (94)](https://user-images.githubusercontent.com/109027067/233311124-a1ef1ead-2fd3-4421-83b5-06045253d44b.png)
+![image](https://user-images.githubusercontent.com/109027067/233311339-e0b6929b-57e2-4c0d-bbdb-56d654d8efe3.png)
